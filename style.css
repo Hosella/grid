@@ -1,0 +1,55 @@
+:root {
+  --box-height: 300px;
+  --column-count: 1;
+}
+
+body {
+  margin: 0;
+}
+
+.container {
+ display: grid;
+ grid-template-columns: repeat(var(--column-count), minmax(var(--box-height), 1fr));
+ gap: 10px;
+}
+
+@media all and (min-width: 600px) {
+  .container {
+    --column-count: 2;
+   }
+}
+
+@media all and (min-width: 900px) {
+  .container {
+    --column-count: 3;
+   }
+}
+
+.box {
+  height: var(--box-height);
+  line-height: var(--box-height);
+}
+
+.box--1 {
+  background-color: rgb(100%, 100%, 0%);
+}
+
+.box--2 {
+  background-color: rgb(80%, 80%, 0%);
+}
+
+.box--3 {
+  background-color: rgb(60%, 60%, 0%);
+}
+
+.box--4 {
+  background-color: rgb(40%, 40%, 0%);
+}
+
+.box--5 {
+  background-color: rgb(20%, 20%, 0%);
+}
+
+.box--6 {
+  background-color: rgb(0%, 0%, 0%);
+}
