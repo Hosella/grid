@@ -1,2 +1,2 @@
 # grid
-[open] https://hosella.github.io/grid/
+[open](https://hosella.github.io/grid/)
