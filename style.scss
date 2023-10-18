@@ -1,0 +1,31 @@
+$box-height: 300px;
+// $column-count: 1;
+
+body {
+  margin: 0;
+}
+
+.container {
+  
+  display: grid;
+  grid-template-columns: repeat(1, minmax($box-height, 1fr));
+  gap: 10px;
+
+  @media (min-width: 600px) {
+    grid-template-columns: repeat(2, minmax($box-height, 1fr));
+  }
+
+  @media (min-width: 900px) {
+    grid-template-columns: repeat(3, minmax($box-height, 1fr));
+  }
+
+  &__box {
+    height:$box-height;
+  }
+
+  @for $i from 1 through 6 {
+    & :nth-child(n + #{$i}) {
+      background-color: rgb(120% - 20 * $i, 120% - 20 * $i, 0%);
+    }
+  }
+}
